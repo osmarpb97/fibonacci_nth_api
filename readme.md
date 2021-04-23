@@ -109,6 +109,31 @@ As you can see in the tests the recursive algorithm is faster when the numbers a
 
 Then if we got a database we can for sure use memoization! To optimize the final algorithm, and then we can implement the Karatzuba algorithm in the multiplications! 
 
-pip install fastapi
-pip install fastapi-utils
-pip install uvicorn[standard]
+## How to run this :) 
+
+```
+virtualenv env
+source /env/bin/activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+## Endpoints
+
+Then the last we have 3 endpoints
+
+## /easy   
+    """Calculate the NTH fibo using the count method"""
+## /optimal
+    """Calculate the NTH fibo using doubling method (recursive)"""
+## /final
+    """Calculate the NTH fibo using doubling method (iterative and optimized)"""
+
+All these endpoints receive a parameter called number which is the index of the fibonacci number, for example:
+
+https://fibo-api-osmar.herokuapp.com/final?number=10
+https://fibo-api-osmar.herokuapp.com/optimal?number=10
+https://fibo-api-osmar.herokuapp.com/easy?number=10
+
+## You can try it in but please dont exced of the 10,000,000 number :)
+https://fibo-api-osmar.herokuapp.com/easy?number=10
